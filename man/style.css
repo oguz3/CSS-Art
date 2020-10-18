@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap");
+:root {
+    --background: #6ccacc;
+    --skincolor: #f2c5a4;
+    --angryskin: #d5234c;
+    --haircolor: #756969;
+    --eyecolor: #754346;
+    --nosecolor: #f2a088;
+    --earincolor: #de7659;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+a.ref {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    color: #757575;
+    text-decoration: none;
+}
+.text {
+    font-family: "Sansita Swashed", cursive;
+    position: absolute;
+    bottom: calc(50vh + 205px);
+    color: white;
+    font-size: 46px;
+    font-weight: 100;
+}
+.man .hair {
+    width: 375px;
+    height: 100px;
+    margin-left: -75px;
+    border-radius: 0px 75px;
+    background-color: var(--haircolor);
+}
+.man .face {
+    width: 300px;
+    height: 150px;
+    background: var(--skincolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.man .face .eye_1,
+.man .face .eye_2 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--eyecolor);
+    position: relative;
+}
+.man .face .eye_1 {
+    margin-right: 100px;
+}
+.man .face .eye_1::after {
+    content: " ";
+    width: 60px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: var(--haircolor);
+    position: absolute;
+    left: -15px;
+    top: -25px;
+    transition: 0.8s;
+}
+.man .face .eye_2::after {
+    content: " ";
+    width: 60px;
+    height: 15px;
+    border-radius: 20px;
+    background-color: var(--haircolor);
+    position: absolute;
+    left: -10px;
+    top: -30px;
+    transform: rotate(20deg);
+    transition: 0.4s;
+}
+.man:hover .face .eye_2::after {
+    left: -15px;
+    top: -25px;
+    transform: rotate(-10deg);
+}
+.man:hover .face .eye_1::after {
+    left: -15px;
+    top: -25px;
+    transform: rotate(20deg);
+}
+.man .face .nose {
+    position: absolute;
+    width: 30px;
+    height: 75px;
+    border-radius: 10px;
+    bottom: -25px;
+    background-color: var(--nosecolor);
+    z-index: 2;
+}
+.man .face .ear_1,
+.man .face .ear_2 {
+    position: absolute;
+    width: 30px;
+    height: 75px;
+    background-color: var(--nosecolor);
+    bottom: -25px;
+}
+.man .face .ear_1 {
+    border-radius: 15px 0px 0px 15px;
+    left: -30px;
+}
+.man .face .ear_1::after {
+    content: " ";
+    width: 20px;
+    height: 55px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: var(--earincolor);
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.man .face .ear_2 {
+    border-radius: 0px 15px 15px 0px;
+    right: -30px;
+}
+.man .face .ear_2::after {
+    content: " ";
+    width: 20px;
+    height: 55px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--earincolor);
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+.man .bread {
+    width: 300px;
+    height: 200px;
+    background-color: var(--haircolor);
+    border-radius: 0px 0px 250px 250px;
+    position: relative;
+}
+.man .bread .mouth {
+    width: 100px;
+    height: 100px;
+    border: 5px solid var(--nosecolor);
+    background: transparent;
+    border-radius: 0 90px 0 0;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    left: 95px;
+    top: 0px;
+    transform: rotate(135deg);
+}
+.man:hover .bread .mouth {
+    border-right-color: transparent;
+    transform: rotate(180deg);
+    border-radius: 0 0 0 0;
+    top: -25px;
+}
+.man:hover .face {
+    background: linear-gradient(var(--angryskin) -300%, var(--skincolor));
+}
