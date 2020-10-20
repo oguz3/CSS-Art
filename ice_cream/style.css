@@ -1,0 +1,168 @@
+:root {
+    --background: #ffd54f;
+    --maincolor: #f385b6;
+    --brightcolor: #f499c2;
+    --handcolor: #edaa7d;
+    --eyecolor: #ed3492;
+    --handshadow: #dc9f73;
+}
+body {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+a.ref {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    color: #757575;
+    text-decoration: none;
+}
+.ice_cream .body {
+    width: 350px;
+    height: 500px;
+    border-radius: 200px 200px 50px 50px;
+    background-color: var(--brightcolor);
+    position: relative;
+}
+.ice_cream .body .shadow_top {
+    width: 350px;
+    height: 487px;
+    border-radius: 180px 190px 50px 50px;
+    background-color: var(--maincolor);
+    position: absolute;
+    bottom: 0;
+}
+.ice_cream .body .bright {
+    width: 40px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--brightcolor);
+    position: absolute;
+    right: 50px;
+    top: 75px;
+    transform: rotate(-40deg);
+}
+.ice_cream .body .eye_1 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--eyecolor);
+    position: absolute;
+    left: 75px;
+    bottom: 140px;
+}
+.ice_cream .body .eye_1:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    filter: blur(0.8px);
+}
+.ice_cream .body .eye_2 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--eyecolor);
+    position: absolute;
+    right: 75px;
+    bottom: 140px;
+}
+.ice_cream .body .eye_2:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    filter: blur(0.8px);
+}
+.ice_cream .body .mouth {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px 6px 32px 32px;
+    background-color: var(--brightcolor);
+    position: absolute;
+    right: 125px;
+    bottom: 75px;
+}
+.ice_cream .body .mouth:before {
+    content: "";
+    width: 100px;
+    height: 35px;
+    border-radius: 6px 6px 28px 28px;
+    background-color: var(--eyecolor);
+    position: absolute;
+}
+.ice_cream .body .hot {
+    width: 30px;
+    height: 40px;
+    border-radius: 6px 6px 32px 32px;
+    background-color: var(--maincolor);
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    animation-name: melt;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+.ice_cream .body .hot_2 {
+    width: 30px;
+    height: 40px;
+    border-radius: 6px 6px 32px 32px;
+    background-color: var(--maincolor);
+    position: absolute;
+    bottom: -20px;
+    right: 50px;
+    animation-name: melt_2;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+.ice_cream .handle {
+    width: 100px;
+    height: 150px;
+    border-radius: 0px 0px 200px 200px;
+    background-color: var(--handcolor);
+    margin-left: 125px;
+}
+.ice_cream .handle:after {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    background-color: var(--handshadow);
+}
+@keyframes melt {
+    0% {
+        height: 20px;
+        bottom: 20px;
+    }
+    50% {
+    }
+    100% {
+        height: 70px;
+        bottom: -50px;
+    }
+}
+@keyframes melt_2 {
+    0% {
+        height: 5px;
+        bottom: 10px;
+    }
+    50% {
+    }
+    100% {
+        height: 30px;
+        bottom: -20px;
+    }
+}
